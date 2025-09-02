@@ -8,6 +8,7 @@
   - A "command line interface" tool that you download and install on your local machine to safely and securely transfer a database to SQLRsync Server
 - Replica
   - A database copied to SQLRsync Server for backup or distribution
+  - Replicas can use the file extensions `.db`, `.sqlite`, or `.sqlite3`
 - Version
   - A copy of replica created each time your database is PUSHed to the SQLRSync Server
 - Push
@@ -18,6 +19,10 @@
   - A private or sharable, randomly generated string that may allow PUSHing or PULLing to an Account or Replica. Keys are created using the pattern `/([a-zA-Z0-9]{20-25})/`
 - Customer-Supplied Encryption Key (CSEK)
   - Different from the keys above which manage access to PUSH or PULL replicas, a CSEK is used by the SQLRsync CLI to encrypt data symmetrically before it is PUSHed to SQLRsync Server, and to decrypt the data when PULLed. A CSEK is never transmitted to SQLRsync Server.
+- Egress
+  - Egress is the amount of database data PULLed or otherwise downloaded.  Because egress is free on our primary CDN, Cloudflare, we do not charge for egress data.
+- Ingress
+  - Ingress is the amount of database data PUSHed to a SQLRsync Server.  Accounts have an ingress soft limit equal to the amount of storage their plan has.
 
 ### SQLRsync.com
 
@@ -75,7 +80,7 @@
 - LOCAL
   - A SQLite database on the computer you have installed SQLRsync on.
   - LOCAL databases are always referred to by a "relative or absolute" folder location, which means they:
-    - Start with `./` or `/`
+    - Start with `./`, `../`, or `/`
       - Examples: ./data/database.sqlite, /var/data/application/database.sqlite
     - OR do not contain a `/`
       - Example: database.sqlite, database.db, database.sqlite3

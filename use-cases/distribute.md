@@ -34,4 +34,4 @@ or
 
 > sqlrsync demo/my-data.sqlite3 --key=abcd1234abcd1234 --subscribe
 
-... to subscribe to changes as they are pushed to SQLRsync Server
+... to pull and subscribe to changes as they are pushed to SQLRsync Server
