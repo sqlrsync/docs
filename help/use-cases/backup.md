@@ -1,3 +1,7 @@
+---
+layout: default.njk
+title: Efficiently Backup SQLite with SQLRsync
+---
 ## Backup with SQLRsync
 
 ### Terms Used

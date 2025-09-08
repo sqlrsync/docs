@@ -1,3 +1,7 @@
+---
+layout: default.njk
+title: The -sqlrsync file
+---
 ## Alternatives to SQLRSync
 
 Of these alternatives, SQLRsync is possibly the easiest to set up and start backing up data regularly (less than 30 seconds and reasonable defaults to protect your data and prevent unexpected bills).

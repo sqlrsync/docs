@@ -1,3 +1,7 @@
+---
+layout: default.njk
+title: Calculate your SQLRsync Usage
+---
 Create a mock db/name
 
 - Size

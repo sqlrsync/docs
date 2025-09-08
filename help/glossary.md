@@ -1,3 +1,7 @@
+---
+layout: default.njk
+title: Glossary
+---
 ## Glossary
 
 ### General Terms

@@ -1,3 +1,7 @@
+---
+layout: default.njk
+title: The -sqlrsync file
+---
 ## The -sqlrsync file
 
 Adjascent to a SQLite database that has been PUSHed or PULLed with SQLRsync Server is an executable datafile that contains a Replica Pull Key to allow a read-replica to continue to receive updates.

@@ -1,3 +1,7 @@
+---
+layout: default.njk
+title: Fossil Replication
+---
 ## Fossil Replication
 
 [Fossil](https://fossil-scm.org/home/doc/trunk/www/index.wiki) is a Source Control Management tool written by the team that creates SQLite.
