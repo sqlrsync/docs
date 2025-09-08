@@ -1,10 +1,11 @@
 {
   "name": "sqlrsync-docs",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "scripts": {
-    "build": "rm -rf ../webapp/app/pages/help; eleventy --output=../webapp/app/pages/help",
-    "dev": "rm -rf ../webapp/app/pages/help; eleventy --watch --incremental --output=../webapp/app/pages/help",
+    "build": "rm -rf ../webapp/app/pages/help; eleventy --input=help/. --output=../webapp/app/pages/help",
+    "dev": "rm -rf ../webapp/app/pages/help; eleventy --watch --input=help/. --incremental --output=../webapp/app/pages/help",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "keywords": [],
