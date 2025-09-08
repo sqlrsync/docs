@@ -2,7 +2,6 @@
 layout: default.njk
 title: Distribute SQLite Databases using Websockets
 ---
-## Distribute
 
 First, follow the tutorial to [send a database](/use-cases/backup) to SQLRsync Server.
 

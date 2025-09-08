@@ -2,7 +2,6 @@
 layout: default.njk
 title: Glossary
 ---
-## Glossary
 
 ### General Terms
 
@@ -24,9 +23,9 @@ title: Glossary
 - Customer-Supplied Encryption Key (CSEK)
   - Different from the keys above which manage access to PUSH or PULL replicas, a CSEK is used by the SQLRsync CLI to encrypt data symmetrically before it is PUSHed to SQLRsync Server, and to decrypt the data when PULLed. A CSEK is never transmitted to SQLRsync Server.
 - Egress
-  - Egress is the amount of database data PULLed or otherwise downloaded.  Because egress is free on our primary CDN, Cloudflare, we do not charge for egress data.
+  - Egress is the amount of database data PULLed or otherwise downloaded. Because egress is free on our primary CDN, Cloudflare, we do not charge for egress data.
 - Ingress
-  - Ingress is the amount of database data PUSHed to a SQLRsync Server.  Accounts have an ingress soft limit equal to the amount of storage their plan has.
+  - Ingress is the amount of database data PUSHed to a SQLRsync Server. Accounts have an ingress soft limit equal to the amount of storage their plan has.
 
 ### SQLRsync.com
 

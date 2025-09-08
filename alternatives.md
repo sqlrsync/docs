@@ -1,16 +1,15 @@
 ---
 layout: default.njk
-title: The -sqlrsync file
+title: Alternatives to SQLRSync
 ---
-## Alternatives to SQLRSync
 
 Of these alternatives, SQLRsync is possibly the easiest to set up and start backing up data regularly (less than 30 seconds and reasonable defaults to protect your data and prevent unexpected bills).
 
-SQLRsync doesn't require any application level changes (unlike
+SQLRsync doesn't require any application level changes and can be layered on after you set up a service.
 
 ### ... vs. sqlite3_rsync
 
-Website: https://sqlite.org/rsync.html
+Website: [https://sqlite.org/rsync.html](https://sqlite.org/rsync.html)
 
 Set up: Download and install [sqlite_tools](https://sqlite.org/download.html), manually set up a secure unattended SSH key to a remote server, manually set up version control, manually set up retention policies.
 
@@ -46,10 +45,9 @@ Better at: Windows support, live-streaming all changes to storage
 
 Set up: [Download](https://litestream.io/install) and install Litestream, create an S3 bucket, secure and set retention policies,
 
-Simiarly:
+Similarly:
 
-- Both allow restoring a SQLite Database to a historic moment in time
-- ? Requires the database to be offline to set up
+- Both allow restoring a SQLite Database to a historic moment in tim
 - Requires setting up, securing, and paying for an S3 storage bucket
 - Streams all changes to the database to S3 and will use more storage space than SQLRsync
 - Uses
@@ -60,7 +58,7 @@ However:
 - SQLRsync CLI uses cron or can manually be run, whereas usually Litestream runs as a system service and transmits data about every second
 - Litestream is not designed for distribution of your database to other users, nor keeping other read-replicas in sync
 
-### litefs
+### ... vs. litefs
 
 Website: [github.com/superfly/litefs](https://github.com/superfly/litefs)
 

@@ -6,19 +6,22 @@ permalink: "{{ page.filePathStem }}.vue"
 useSeoMeta({
   titleTemplate: '',
   ogTitle: '{{ title }}',
-  ogDescription:
-    '{{ description }}',
+  ogDescription: '{{ description }}',
+});
+
+definePageMeta({
+  layout: 'help',
 });
 </script>
-
 <template>
-  <UPageBody class="md:px-20 mx-5">
-    <article class="prose dark:prose-invert">
-      <div class="mx-auto pb-0 mb-0">
+  <div class="content w-full">
+    
+      <div class="pb-0 mb-0 prose dark:prose-invert">
         <h3>{{ title }}</h3>
       </div>
       <hr class="my-3 py-0" />
-      {{ content | safe }}
-    </article>
-  </UPageBody>
+      <article class="prose dark:prose-invert">
+        {{ content | safe }}
+      </article>
+    </div>
 </template>
