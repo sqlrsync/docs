@@ -21,4 +21,4 @@ User accounts on SQLRsync are protected by passkey by default, and by default ca
 
 All user data is compartmentalized to stay just on the CDN you use to interact with SQLRsync. If you use Cloudflare, your data stays on Cloudflare. If you use Bunny.net, your data stays on Bunny.net. If your data is hosted by Bunny.net (based in the EU), you can opt-in to using Bunny.net's US based datacenters for your replicated content (by default: we won't).
 
-You may make and use your own Client Side Encryption (CSE) keys to encrypt your database data before it is uploaded to the CDN. This ensures that neither SQLRsync nor the storage CDNs can decrypt your data.
+You may make and use your own Customer-Supplied Encryption (CSE) keys to encrypt your database data before it is uploaded to the CDN. This ensures that neither SQLRsync nor the storage CDNs can decrypt your data.
