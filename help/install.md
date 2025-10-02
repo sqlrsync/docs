@@ -17,6 +17,7 @@ OS=$(uname -s | tr '[:upper:]' '[:lower:]'); CPU=$(uname -m); ARCH=${OS}-${CPU}
 wget --spider --quiet https://sqlrsync.com/dl/latest/$ARCH || {echo "ERROR: There doesn't appear to be a release for $ARCH"; exit 1;} && \
 wget https://sqlrsync.com/dl/latest/$ARCH -O /tmp/sqlrsync.tar.gz || { echo "ERROR: Couldn't write to /tmp/"; exit 1; } && \
 sudo tar -xzvf /tmp/sqlrsync.tar.gz -C /usr/local/bin sqlrsync || { echo "ERROR: Couldn't extract to /usr/local/bin"; exit 1; } && \
+# apple users: xattr -rd com.apple.quarantine /usr/local/bin/sqlrsync
 sqlrsync --version && \
 echo "Success!"
 ```
