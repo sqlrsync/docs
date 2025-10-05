@@ -1,5 +1,5 @@
 ---
-title: Help
+title: SQLRsync Help & Documentation
 layout: default.njk
 ---
 
