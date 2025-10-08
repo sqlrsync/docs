@@ -4,8 +4,12 @@
   "type": "module",
   "description": "",
   "scripts": {
-    "build": "rm -rf ../webapp/app/pages/help; eleventy --input=help/. --output=../webapp/app/pages/help",
+    "build": "pnpm build:help && pnpm build:blog",
+    "build:help": "rm -rf ../webapp/app/pages/help; eleventy --input=help/. --output=../webapp/app/pages/help",
+    "build:blog": "rm -rf ../webapp/app/pages/blog; eleventy --input=blog/. --output=../webapp/public/blog",
+    "build:blog-sitemap": "rm -rf ../webapp/public/sitemap-blog.xml; eleventy --input=blog/sitemap.xml.md --output=../webapp/public/",
     "dev": "rm -rf ../webapp/app/pages/help; eleventy --watch --input=help/. --incremental --output=../webapp/app/pages/help",
+    "dev:blog": "rm -rf ../webapp/app/pages/blog; eleventy --watch --input=blog/. --incremental --output=../webapp/public/blog",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "keywords": [],

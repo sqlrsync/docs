@@ -1,0 +1,24 @@
+---
+permalink: "sitemap.xml"
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Blog Index Page -->
+  <url>
+    <loc>https://sqlrsync.com/blog</loc>
+    <lastmod>{{ "now" | date('%Y-%m-%d') }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Blog Posts -->
+  {%- set posts = collections.posts | reverse -%}
+  {%- for post in posts -%}
+  <url>
+    <loc>https://sqlrsync.com/blog{{ post.url | replace('.vue', '') }}</loc>
+    <lastmod>{{ post.data.date | date('%Y-%m-%d') }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {%- endfor -%}
+</urlset>
