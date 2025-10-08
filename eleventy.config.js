@@ -6,7 +6,12 @@ export default function (eleventyConfig) {
 
 	// Create a collection for blog posts
 	eleventyConfig.addCollection("posts", function (collectionApi) {
-		return collectionApi.getFilteredByGlob("blog/posts/*.md");
+		// Try both possible paths depending on build context
+		const blogPosts = collectionApi.getFilteredByGlob("blog/posts/*.md");
+		const posts = collectionApi.getFilteredByGlob("posts/*.md");
+
+		// Return whichever one has results
+		return blogPosts.length > 0 ? blogPosts : posts;
 	});
 
 	// Add date filter for formatting dates
