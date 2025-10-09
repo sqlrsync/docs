@@ -10,11 +10,12 @@ title: Efficiently Backup SQLite with SQLRsync
 
 ### Quickest Setup
 
-1. [Install SQLRsync](/help/install)
+1. [Install SQLRsync](/download)
 1. You need an SQLRsync.com Account:
    1. [Register](/signup)
    2. Verify your email address
-   3. Follow the Setup Namespace flow
+   3. Follow the [Setup Namespace](/namespaces/create) flow
+   4. Use the `Get Admin Key` button [to copy your Account Admin Key](/namespaces) to your clipboard
 1. Go to the directory your-db.sqlite is located:
    ```sh
    cd /path/to/app

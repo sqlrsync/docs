@@ -2,39 +2,52 @@
 layout: default.njk
 title: Distribute SQLite Databases using Websockets
 ---
+Below we use an example database which has a SQLRsync Replica at [sqlrsync.com/usgs.gov/earthquakes.db](https://sqlrsync.com/usgs.gov/earthquakes.db).  Alternatively, use your own data by following the [Backup SQLite guide](/help/use-cases/backup).
 
-First, follow the tutorial to [send a database](/use-cases/backup) to SQLRsync Server.
-
-In the examples below, we'll use a database called `my-data.sqlite3` which has a SQLRsync Replica at `sqlrsync.com/demo/my-data.sqlite3`
-
-After PUSHing `my-data.sqlite3` to SQLRsync Server, a `my-data.sqlite3-sqlrsync` file will be updated next to my-data.sqlite3 on your local machine.
-
-### Optional: Create a Public Replica Page
-
-Edit your Replica Config on SQLRsync.com to set the Replica as Public. You can now share `https://sqlrsync.com/demo/my-data.sqlite3` with others and they will have the ability to download a copy via the browser or sqlrsync CLI.
+The `earthquakes.db` is updated every few minutes with new earthquakes from around the world.  This will give you some example data to try with.
 
 ### Optional: Share via Version Control
 
-You can commit `my-data.sqlite3-sqlrsync` file to Version Control (such as git) and anyone with access to that file can run it to PULL the most recent version of `demo/mydata.sqlite3` to their local machine, as long as the key in the file is valid.
+* [How to distribute SQLite databases via Git](/help/use-cases/sqlite-in-git)
 
-To run the -sqlrsync file:
+### Demo: Share the CLI Command using Real Time Replication via Websockets
 
-> ./my-data.sqlite3-sqlrsync
+1. [Install SQLRsync](/download)
+2. No account required because the example `sqlrsync.com/usgs.gov/earthquakes.db` is shared publicly
+3. Run the sqlrsync command to PULL the latest copy of the database and `--subscribe` to real-time updates:
 
-To subscribe to changes as they are pushed to SQLRsync Server, add the `--subscribe` flag:
+   ```sh
+   sqlrsync usgs.gov/earthquakes.db --subscribe
+   ```
 
-> ./my-data.sqlite3-sqlrsync --subscribe
+### Demo: Use the shareable -sqlrsync file to subscribe via Websockets
 
-### Optional: Share the CLI Command
+1. [Install SQLRsync](/download)
+2. Visit [sqlrsync.com/usgs.gov/earthquakes.db](https://sqlrsync.com/usgs.gov/earthquakes.db) (No account required)
+   1. In the right side-panel, click `Download`
+   2. Choose `Download -sqlrsync`
+   3. Move the file to where you'd like the earthquakes.db to be located.
+3. Run the -sqlrsync file to PULL the latest copy of the database and `--subscribe` to real-time updates:
 
-You can find a Replica Pull Key within the `-sqlrsync` file or in your Replica Config page on SQLRsync.com. For example, let's say the key is "abcd1234abcd1234". Other users with the sqlrsync command installed can then run:
+   ```sh
+   ./earthquakes.db-sqlrsync --subscribe
+   ```
 
-> sqlrsync demo/my-data.sqlite3 --key=abcd1234abcd1234
+### Share your own databases in real time
 
-... to pull the latest version
+1. [Install SQLRsync](/download)
+1. You need an SQLRsync.com Account:
+   1. [Register](/signup)
+   2. Verify your email address
+   3. Follow the [Setup Namespace](/namespaces/create) flow
+   4. Use the `Get Admin Key` button [to copy your Account Admin Key](/namespaces) to your clipboard
+1. Go to the directory your-db.sqlite is located:
+   ```sh
+   cd /path/to/app
+   ```
+1. Execute the command:
+   ```sh
+   sqlrsync your-db.sqlite
+   ```
 
-or
-
-> sqlrsync demo/my-data.sqlite3 --key=abcd1234abcd1234 --subscribe
-
-... to pull and subscribe to changes as they are pushed to SQLRsync Server
+   - This will create a new private Replica at sqlrsync.com/`(your namespace)`/your-db.sqlite

@@ -15,7 +15,7 @@ permalink: "sitemap.xml"
     {%- for post in posts -%}
     {%- if post.data.draft -%}
       { continue }
-    {%- endif -%}
+    {%- endif -%}a
   <url>
     <loc>https://sqlrsync.com/blog{{ post.url | replace('.vue', '') }}</loc>
     <lastmod>{{ post.data.date | date('%Y-%m-%d') }}</lastmod>
