@@ -20,7 +20,7 @@ Last updated 2025-10-11 9pm PT.
 ## Current experiments
 
 - v0.0.6 [Automatic push feature](https://sqlrsync.com/blog/posts/2025-10-07-dev-notes) is experimental and may have bugs or rough edges. Please report any issues you encounter.
-  - Client reports Read Timeouts if no PUSHes for some time, but successfully reconnects an keeps and eye on your database.
+  - Client reports Read Timeouts if no PUSHes for some time, but successfully reconnects and keeps an eye on your database.
 
 ## Resolved Issued
 
