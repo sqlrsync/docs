@@ -3,19 +3,19 @@ title: System Architecture
 layout: default.njk
 ---
 
-There's a lot to be said here and I will update this more later.
-
 ### Cloudflare Server Side
 
-- Workers for static website hosting
+- Edge Workers for the website and general APIs.
 
-- Workers with D1 Database for account metadata and access keys
+- D1 Databases for account metadata, version metadata, and access credentials.
 
-- Each SQLRsync Account has its own collection of Durable Objects that house their private database data, detailed revision history, customer support conversations, and detailed logging, which is constrained to 10gb. We therefore limit individual databases to 8gb at this time.
+- R2 block-storage for page-level storage.
 
-- After 8gb of database data, additional database data is stored "cold" encrypted on Cloudflare R2
+- Hibernation API Durable Objects handle websocket subscriptions.
 
 ### Bunny.net Server Side
+
+Bunny, an EU-based CDN, is able to be custom deployed with a subset of features.  [Contact us](/support) if you'd like to discuss EU-sovereign hosting.
 
 - Static website hosting
 

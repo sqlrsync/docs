@@ -11,7 +11,7 @@ Data we collect includes:
 
 - Your email address
 - Your IP address (only the CDNs below)
-- Databases you upload (stored encrypted the CDN in an isolated environment, such as Cloudflare Durable Object SQL Storage)
+- Databases you upload (stored encrypted by the CDN, such as Cloudflare R2 Block Storage)
 
 Our 3rd party providers that may receive your data through the course of providing our service:
 
@@ -22,5 +22,5 @@ Our 3rd party providers that may receive your data through the course of providi
   - [Stripe (based in United States)](https://stripe.com/): for payment processing
   - [Adyen (based in the Netherlands)](https://adyen.com/): for payment processing
 - For email receiving and sending:
-  - [AhaSend (based in Austria)](https://ahamail.com/): emails sent from the app (such as 2FA Verification, account notices, password reset) will be sent from the app.sqlrsync.com domain. For all global SQLRsync.com users, outbound emails are routed first through AhaSend's European SMTP server..
+  - [AhaSend (based in Austria)](https://ahamail.com/): emails sent from the app (such as 2FA Verification, account notices, password reset) will be sent from the app.sqlrsync.com domain. For all global SQLRsync.com users, outbound emails are routed first through AhaSend's European SMTP server.
   - [FastMail (based in Australia)](https://fastmail.com/): if we communicate via email (paid plan)
