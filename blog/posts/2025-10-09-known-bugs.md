@@ -2,7 +2,7 @@
 layout: post.njk
 title: "Known Bugs and Limitations"
 description: A living document capturing the known issues for the site.
-date: 2025-10-08
+date: 2025-10-11
 badge: announcements
 authors:
   - name: Matt
