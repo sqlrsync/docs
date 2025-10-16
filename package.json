@@ -8,7 +8,7 @@
     "build:help": "rm -rf ../webapp/app/pages/help; eleventy --input=help/. --output=../webapp/app/pages/help",
     "build:blog": "rm -rf ../webapp/app/pages/blog; rm -rf ../webapp/public/blog/posts; eleventy --input=blog/. --output=../webapp/app/pages/blog",
     "build:blog-sitemap": "rm -rf ../webapp/public/blog/sitemap.xml; eleventy --input=blog/. --output=../webapp/public/blog",
-    "dev": "rm -rf ../webapp/app/pages/help; eleventy --watch --input=help/. --incremental --output=../webapp/app/pages/help",
+    "dev:help": "rm -rf ../webapp/app/pages/help; eleventy --watch --input=help/. --incremental --output=../webapp/app/pages/help",
     "dev:blog": "rm -rf ../webapp/app/pages/blog; eleventy --watch --input=blog/. --incremental --output=../webapp/app/pages/blog",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
