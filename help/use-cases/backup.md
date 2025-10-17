@@ -31,7 +31,7 @@ title: Efficiently Backup SQLite with SQLRsync
 And that's it!  Upon success, it'll look like this:
 ```
 matt@homelab1 ~ % cd /path/to/app
-matt@homelab1 app % sqlrsync thisisatest.db
+matt@homelab1 app % sqlrsync your-db.sqlite
 No Key provided. Creating a new Replica? Get a key at https://sqlrsync.com/namespaces
    Enter an Account Admin Key to create a new Replica: aaBBccDDeeFFggHHiiJJkkMM-abcd123
 PUSHing up to wss://sqlrsync.com/ ...
@@ -74,3 +74,5 @@ You're set! Adjascent to `your-db.sqlite`, a new `your-db.sqlite-sqlrsync` file 
   ```sh
   sqlrsync your-db.sqlite mynamespace/someothername.db
   ```
+
+- Or you can rename a replica on the website on the Replica Config page for that database.

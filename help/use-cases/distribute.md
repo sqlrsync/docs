@@ -50,4 +50,4 @@ The `earthquakes.db` is updated every few minutes with new earthquakes from arou
    sqlrsync your-db.sqlite
    ```
 
-   - This will create a new private Replica at sqlrsync.com/`(your namespace)`/your-db.sqlite
+   - This will create a new private Replica at sqlrsync.com/`(your namespace)`/`(hostname)`/`(path)`your-db.sqlite

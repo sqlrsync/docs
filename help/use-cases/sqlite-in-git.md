@@ -21,11 +21,14 @@ For databases up to 100mb, SQLRsync is a [free-for-life tool](/pricing) to manag
    ```sh
    cd /path/to/app
    ```
-1. Execute the command: `sqlrsync your-db.sqlite`
+1. Run the sqlrsync command to create a backup:
+   ```sh
+   sqlrsync your-db.sqlite
+   ```
 
-   - This will create a new private Replica at sqlrsync.com/(your namespace)/your-db.sqlite
+   - This will create a new private Replica at sqlrsync.com/myhomelabbackup/homelab1/path/to/app/your-db.sqlite because by default it will use your namespace followed by the hostname of the computer you're on, followed by the full path to the database file.
 
-1. Follow the instructions to get an Account Admin Key and enter it when prompted
+1. When prompted, paste in the Account Admin Key you copied earlier (or return to your browser to get it again).
 
 Finally, add the -sqlrsync file to your git repo and add the original sqlite file to .gitignore:
 
