@@ -24,3 +24,5 @@ Our 3rd party providers that may receive your data through the course of providi
 - For email receiving and sending:
   - [AhaSend (based in Austria)](https://ahamail.com/): emails sent from the app (such as 2FA Verification, account notices, password reset) will be sent from the app.sqlrsync.com domain. For all global SQLRsync.com users, outbound emails are routed first through AhaSend's European SMTP server.
   - [FastMail (based in Australia)](https://fastmail.com/): if we communicate via email (paid plan)
+- For web and platform analytics:
+  - [PostHog (based in United States)](https://posthog.com/): for web and product analytics.  Client IP data is discarded and not stored.
